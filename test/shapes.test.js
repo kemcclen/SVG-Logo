@@ -1,5 +1,6 @@
 const {Circle, Square, Triangle} = require("../lib/Shape");
 
+//checks to see that the circle has the correct shape paremeters 
 describe('Circle', () => {
     it('Renders a circle', () => {
         const shape = new Circle();

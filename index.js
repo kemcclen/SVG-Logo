@@ -3,6 +3,7 @@ const fs = require('fs');
 const MakeSVG = require('./lib/makeLogo');
 const { Circle, Square, Triangle } = require('./lib/Shape.js');
 
+//question prompts 
 function init() {
   inquirer
     .prompt([
@@ -28,6 +29,7 @@ function init() {
         choices: ['circle', 'square', 'triangle'],
       },
     ])
+    //match prompt answer with shape 
     .then(({ logoLetters, textColor, logoColor, logoShape }) => {
       let shape;
       switch (logoShape) {
@@ -45,6 +47,7 @@ function init() {
       }
       shape.setColor(logoColor);
 
+      // users letters and colours into selected shape
       const svgGen = new MakeSVG();
       svgGen.setTextElement(logoLetters, textColor);
       svgGen.setShapeElement(shape);
@@ -52,6 +55,7 @@ function init() {
       const finalSvg = svgGen.render();
       console.log(finalSvg);
 
+      //error 
       fs.writeFile('logo.svg', finalSvg, (err) => {
         if (err) {
           console.error(err);
