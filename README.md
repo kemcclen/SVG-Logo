@@ -1,7 +1,16 @@
 
 # SVG-Logo
+
 ## Description:
 SVG Logo is a Node.js command-line application that takes user input to generate a logo and saves it as an SVG file. The application prompts the user to select a color and shape, provide text for the logo, and saves the generated SVG to a .svg file.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributors](#contributors)
+- [Test](#test)
+- [License](#license)
 
 ## Installation:
 This application requires Node.js to run, and Jest for the tests.
